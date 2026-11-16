@@ -1,4 +1,3 @@
-
 const User = require('../src/User');
 
 describe('User', () => {
@@ -25,33 +24,27 @@ describe('User', () => {
 
   describe('when created with invalid data', () => {
     test('should throw error when name is empty', () => {
-      expect(() => new User('', 'a@b.com', 25))
-        .toThrow('Name required');
+      expect(() => new User('', 'a@b.com', 25)).toThrow('Name required');
     });
 
     test('should throw error when name is only whitespace', () => {
-      expect(() => new User('   ', 'a@b.com', 25))
-        .toThrow('Name required');
+      expect(() => new User('   ', 'a@b.com', 25)).toThrow('Name required');
     });
 
     test('should throw error when email is invalid', () => {
-      expect(() => new User('John', 'invalid', 25))
-        .toThrow('Invalid email');
+      expect(() => new User('John', 'invalid', 25)).toThrow('Invalid email');
     });
 
     test('should throw error when email is empty', () => {
-      expect(() => new User('John', '', 25))
-        .toThrow('Invalid email');
+      expect(() => new User('John', '', 25)).toThrow('Invalid email');
     });
 
     test('should throw error when age is negative', () => {
-      expect(() => new User('John', 'a@b.com', -1))
-        .toThrow('Invalid age');
+      expect(() => new User('John', 'a@b.com', -1)).toThrow('Invalid age');
     });
 
     test('should throw error when age exceeds 150', () => {
-      expect(() => new User('John', 'a@b.com', 200))
-        .toThrow('Invalid age');
+      expect(() => new User('John', 'a@b.com', 200)).toThrow('Invalid age');
     });
   });
 });

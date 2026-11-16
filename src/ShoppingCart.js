@@ -1,4 +1,3 @@
-
 class ShoppingCart {
   constructor() {
     this.items = [];

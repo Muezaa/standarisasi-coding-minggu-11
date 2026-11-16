@@ -1,4 +1,3 @@
-
 class User {
   constructor(name, email, age) {
     if (!name || name.trim() === '') {

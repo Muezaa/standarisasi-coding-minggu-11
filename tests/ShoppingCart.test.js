@@ -1,4 +1,3 @@
-
 const ShoppingCart = require('../src/ShoppingCart');
 
 describe('ShoppingCart', () => {
@@ -27,9 +26,9 @@ describe('ShoppingCart', () => {
     });
 
     test('should throw error when price is negative', () => {
-      expect(() =>
-        cart.addItem({ name: 'Book', price: -100 })
-      ).toThrow('Price cannot be negative');
+      expect(() => cart.addItem({ name: 'Book', price: -100 })).toThrow(
+        'Price cannot be negative'
+      );
     });
 
     test('should increase quantity when adding existing item', () => {
